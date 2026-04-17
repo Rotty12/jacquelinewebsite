@@ -29,6 +29,9 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: site
+          artifact_name: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+        with:
+          artifact_name: site
