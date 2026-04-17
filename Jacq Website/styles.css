@@ -1,0 +1,203 @@
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.08);
+  --cardBorder: rgba(255,255,255,0.14);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --danger: #ff6b6b;
+  --ok: #2ee59d;
+  --primary: #7c5cff;
+  --primary2: #00d4ff;
+  --shadow: 0 22px 60px rgba(0,0,0,0.55);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 540px at 15% 10%, rgba(124, 92, 255, 0.40), transparent 60%),
+    radial-gradient(900px 540px at 85% 20%, rgba(0, 212, 255, 0.25), transparent 65%),
+    radial-gradient(900px 540px at 60% 90%, rgba(46, 229, 157, 0.16), transparent 60%),
+    var(--bg);
+}
+
+.container{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.header h1{
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+}
+.subhead{
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--cardBorder);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hidden{ display: none; }
+
+.notice{
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.18);
+  padding: 12px 12px;
+  border-radius: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.notice strong{ color: var(--text); }
+
+.form{
+  display: grid;
+  gap: 14px;
+}
+
+.field label{
+  display: block;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+input{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.18);
+  color: var(--text);
+  outline: none;
+}
+input:focus{
+  border-color: rgba(124,92,255,0.9);
+  box-shadow: 0 0 0 3px rgba(124,92,255,0.25);
+}
+
+.hint{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.22);
+}
+
+.primary{
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #081022;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+}
+.primary:active{ transform: translateY(1px); }
+
+.secondary{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.18);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.linkBtn{
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.86);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+.linkBtn:focus{
+  outline: 2px solid rgba(124,92,255,0.55);
+  outline-offset: 2px;
+}
+
+.error{
+  margin: 0;
+  color: var(--danger);
+  min-height: 1.2em;
+}
+
+.footer{
+  color: var(--muted);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.kpi{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.kpiLabel{
+  color: var(--muted);
+  font-weight: 600;
+}
+.kpiValue{
+  font-size: 16px;
+  font-weight: 700;
+}
+.kpiValue.ok{ color: var(--ok); }
+
+.amount{
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.20);
+}
+.amountLabel{
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.amountValue{
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.actions{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+@media (max-width: 520px){
+  .header h1{ font-size: 30px; }
+  .kpi{ grid-template-columns: 1fr; }
+  .amountValue{ font-size: 36px; }
+}
