@@ -1,0 +1,10 @@
+.server-out.txt
+.server-err.txt
+.history/
+.qodo/
+.sixth/
+.zencoder/
+.zenflow/
+node_modules/
+.DS_Store
+Thumbs.db

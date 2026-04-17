@@ -1,0 +1,10 @@
+{
+  "name": "jacq-website",
+  "version": "1.0.0",
+  "description": "Static website with an optional Node.js local server.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

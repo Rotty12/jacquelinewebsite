@@ -4,6 +4,8 @@ This site is static (HTML/CSS/JS), so you can host it for free with no build ste
 
 ## Option A (Recommended): GitHub Pages
 
+This repository is already configured to deploy to GitHub Pages automatically via GitHub Actions.
+
 1. Initialize git (run in this folder):
    - `git init`
    - `git add .`
@@ -13,9 +15,7 @@ This site is static (HTML/CSS/JS), so you can host it for free with no build ste
    - `git remote add origin <YOUR_REPO_URL>`
    - `git branch -M main`
    - `git push -u origin main`
-4. In GitHub: **Settings → Pages**
-   - Source: **Deploy from a branch**
-   - Branch: **main** / **(root)**
+4. The workflow in `.github/workflows/pages.yml` will deploy the site from the repo root.
 5. Your site will be available at `https://<username>.github.io/<repo>/`
 
 ## Option B: Netlify (Drag & Drop)
